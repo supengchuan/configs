@@ -16,7 +16,7 @@ vimrc = "~/.vimrc"
 
 [ubuntu]
 [ubuntu.files]
-polybar = "~/.config/polybar"
+polybar = { target="~/.config/polybar", type="symbolic" }
 bspwm = "~/.config/bspwm"
 sxhkd = "~/.config/sxhkd"
 rofi = "~/.config/rofi"

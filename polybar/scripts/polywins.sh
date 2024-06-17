@@ -4,12 +4,10 @@
 # SETTINGS {{{ ---
 
 active_text_color="#fca2aa"
-#active_bg= "#3E4451"
 active_bg= "#1e222a"
 active_underline="#f9929b"
 
 inactive_text_color="#98c379"
-#inactive_bg= "#3E4451"
 inactive_bg= "#1e222a"
 inactive_underline=
 
