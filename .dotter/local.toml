@@ -1,0 +1,8 @@
+includes = [".dotter/include/linux.toml"]
+packages = ["default", "ubuntu"]
+
+[files]
+
+[variables]
+dpi=108
+

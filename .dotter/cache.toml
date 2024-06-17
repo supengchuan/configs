@@ -1,0 +1,5 @@
+[symlinks]
+vimrc = "/home/supc/.vimrc"
+
+[templates]
+"wezterm.lua" = "/home/supc/.config/wezterm/wezterm.lua"

@@ -1,0 +1,26 @@
+[helpers]
+
+[default]
+depends = []
+
+[default.files]
+vimrc = "~/.vimrc"
+"wezterm.lua" = { target = "~/.config/wezterm/wezterm.lua", type = "template" }
+
+[default.variables]
+
+[windows]
+[windows.files]
+"change.ahk" = "~/.config/autohotkey/change.ahk"
+
+[ubuntu]
+[ubuntu.files]
+polybar = "~/.config/polybar"
+bspwm = "~/.config/bspwm"
+sxhkd = "~/.config/sxhkd"
+rofi = "~/.config/rofi"
+Xmodmap = "~/.Xmodmap"
+Xresources = { target = "~/.Xresources", type = "template" }
+
+[ubuntu.variables]
+dpi="108"
