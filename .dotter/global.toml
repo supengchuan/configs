@@ -12,6 +12,7 @@ vimrc = "~/.vimrc"
 [windows]
 [windows.files]
 "change.ahk" = "~/.config/autohotkey/change.ahk"
+"Microsoft.PowerShell_profile.ps1"="~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1"
 
 [ubuntu]
 [ubuntu.files]
