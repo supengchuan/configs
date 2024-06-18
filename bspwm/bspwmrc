@@ -1,7 +1,10 @@
 #! /bin/sh
 
 # change caps lock to ctrl
-setxkbmap -layout us -option ctrl:nocaps
+#setxkbmap -layout us -option ctrl:nocaps
+setxkbmap -layout us
+# custom keymap
+xmodmap ~/.Xmodmap
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 #feh --randomize --bg-fill ~/Pictures/bg/wallhaven-pk6y2p.png

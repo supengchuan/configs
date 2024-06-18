@@ -4,5 +4,4 @@ packages = ["default", "ubuntu"]
 [files]
 
 [variables]
-dpi=108
-
+dpi = 108

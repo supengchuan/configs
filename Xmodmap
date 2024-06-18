@@ -2,3 +2,7 @@ clear lock
 clear control
 keycode 66 = Control_L
 add control = Control_L Control_R
+
+! clear current Escape assigment and assigning it new one
+keycode 9 =
+keycode 9 = Escape asciitilde Escape

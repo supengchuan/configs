@@ -12,16 +12,18 @@ vimrc = "~/.vimrc"
 [windows]
 [windows.files]
 "change.ahk" = "~/.config/autohotkey/change.ahk"
-"Microsoft.PowerShell_profile.ps1"="~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1"
+"Microsoft.PowerShell_profile.ps1" = "~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1"
 
 [ubuntu]
 [ubuntu.files]
-polybar = { target="~/.config/polybar", type="symbolic" }
+polybar = { target = "~/.config/polybar", type = "symbolic" }
 bspwm = "~/.config/bspwm"
 sxhkd = "~/.config/sxhkd"
-rofi = "~/.config/rofi"
+rofi = { target = "~/.config/rofi", type = "symbolic" }
 Xmodmap = "~/.Xmodmap"
 Xresources = { target = "~/.Xresources", type = "template" }
+wallpaper = { target = "~/.Pictures", type = "symbolic" }
+
 
 [ubuntu.variables]
-dpi="108"
+dpi = "108"
