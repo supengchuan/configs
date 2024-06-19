@@ -1,7 +1,9 @@
 includes = [".dotter/include/linux.toml"]
-packages = ["default", "ubuntu"]
+packages = ["default", "polybar", "ubuntu"]
 
 [files]
 
 [variables]
 dpi = 108
+polybar_heigth = "2%"
+polybar_font_size = 18

@@ -16,7 +16,6 @@ vimrc = "~/.vimrc"
 
 [ubuntu]
 [ubuntu.files]
-polybar = { target = "~/.config/polybar", type = "symbolic" }
 bspwm = "~/.config/bspwm"
 sxhkd = "~/.config/sxhkd"
 rofi = { target = "~/.config/rofi", type = "symbolic" }
@@ -33,3 +32,15 @@ wallpaper = { target = "~/.Pictures", type = "symbolic" }
 [ubuntu.variables]
 dpi = "108"
 username = "supc"
+
+[polybar]
+[polybar.files]
+"polybar/scripts" = { target = "~/.config/polybar/scripts", type = "symbolic" }
+"polybar/colors.ini" = { target = "~/.config/polybar/colors.ini", type = "symbolic" }
+"polybar/launch.sh" = { target = "~/.config/polybar/launch.sh", type = "symbolic" }
+"polybar/modules.ini" = { target = "~/.config/polybar/modules.ini", type = "symbolic" }
+"polybar/config.ini" = { target = "~/.config/polybar/config.ini", type = "template" }
+
+[polybar.variables]
+polybar_heigth = "2%"
+polybar_font_size = 18
