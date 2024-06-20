@@ -1,35 +1,30 @@
 #! /bin/sh
 
-# change caps lock to ctrl
-#setxkbmap -layout us -option ctrl:nocaps
 setxkbmap -layout us
 # custom keymap
-xmodmap ~/.Xmodmap
+[ -f ~/.Xmodmap ] && xmodmap ~/.Xmodmap
 
-pgrep -x sxhkd > /dev/null || sxhkd &
-#feh --randomize --bg-fill ~/Pictures/bg/wallhaven-pk6y2p.png
+pgrep -x sxhkd >/dev/null || sxhkd &
 feh --randomize --bg-fill ~/.Pictures/wallhaven-2yxp16.jpg
-#feh --randomize --bg-fill ~/Pictures/Wallpapers/forest-1.jpg
-#feh --randomize --bg-fill ~/Pictures/Wallpapers/wallhaven-exoovl.png
-pgrep -x polybar > /dev/null || ~/.config/polybar/launch.sh &
-pgrep -x picom > /dev/null || picom &
+pgrep -x polybar >/dev/null || ~/.config/polybar/launch.sh &
+pgrep -x picom >/dev/null || picom &
 #pgrep -x fcitx5 > /dev/null || fcitx5 &
-pgrep autokey > /dev/null || autokey &
+pgrep autokey >/dev/null || autokey &
 #pgrep -x fcitx > /dev/null || fcitx &
-pgrep -x ibus-daemon > /dev/null || ibus-daemon -rxR &
+pgrep -x ibus-daemon >/dev/null || ibus-daemon -rxR &
 
 #pgrep -x clash > /dev/null || /opt/clash/clash &
 vmware-user-suid-wrapper
 
 bspc monitor -d I II III IV V VI
 
-bspc config border_width        3
-bspc config window_gap          5
+bspc config border_width 3
+bspc config window_gap 5
 
-bspc config split_ratio          0.50
+bspc config split_ratio 0.50
 #bspc config split_ratio          0
-bspc config borderless_monocle   true
-bspc config gapless_monocle      false
+bspc config borderless_monocle true
+bspc config gapless_monocle false
 bspc config single_monocle true
 
 bspc rule -a Gimp desktop='^8' state=floating follow=on
@@ -37,6 +32,8 @@ bspc rule -a Chromium desktop='^2'
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
+# for dacs
+bspc rule -a dacs_desk_clerk state=floating center=on focus=on layer=above border=off
 # 在第 6 个desktop 打开 wxwork 并切换该页面
 #bspc rule -a Wine:wxwork.exe desktop='^6' state=floating follow=on focus=on layer=above border=off
 #bspc rule -a Wine:wechat.exe desktop='^5' state=floating follow=on focus=on layer=above border=off
