@@ -179,9 +179,9 @@ end
 function SetWindow()
 	-- code
 	local M = {
-		--window_decorations = "INTEGRATED_BUTTONS|RESIZE",
-		window_decorations = "RESIZE",
-		--integrated_title_buttons = { "Maximize", "Close" },
+		window_decorations = "INTEGRATED_BUTTONS|RESIZE",
+		--window_decorations = "RESIZE",
+		integrated_title_buttons = { "Maximize", "Close" },
 		window_background_opacity = 0.9,
 		initial_rows = 30,
 		initial_cols = 120,
