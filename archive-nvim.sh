@@ -16,8 +16,6 @@ cp -r ~/.local/share/nvim out/data/
 cat << EOF > out/move.sh
 #!/bin/bash
 
-tar -zxvf out.tar.gz
-cd out
 rm -rf ~/.config/nvim
 rm -rf ~/.local/share/nvim
 
