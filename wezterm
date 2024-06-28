@@ -182,7 +182,7 @@ function SetWindow()
 		window_decorations = "INTEGRATED_BUTTONS|RESIZE",
 		--window_decorations = "RESIZE",
 		integrated_title_buttons = { "Maximize", "Close" },
-		window_background_opacity = 0.9,
+		window_background_opacity = {{ wezterm_opacity }},
 		initial_rows = 30,
 		initial_cols = 120,
 		window_padding = {

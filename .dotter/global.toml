@@ -5,9 +5,10 @@ depends = []
 
 [default.files]
 vimrc = "~/.vimrc"
-"wezterm.lua" = { target = "~/.config/wezterm/wezterm.lua", type = "template" }
+wezterm = { target = "~/.config/wezterm/wezterm.lua", type = "template" }
 
 [default.variables]
+wezterm_opacity = 0.9
 
 [windows]
 [windows.files]
