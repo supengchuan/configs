@@ -19,7 +19,7 @@ vmware-user-suid-wrapper
 bspc monitor -d I II III IV V VI
 
 bspc config border_width 3
-bspc config window_gap 5
+bspc config window_gap 10
 
 bspc config split_ratio 0.50
 bspc config borderless_monocle true
@@ -33,4 +33,5 @@ bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 # for dacs
 # open dacs te as float window at screen center
-bspc rule -a dacs_desk_clerk state=floating center=on focus=on layer=above border=off rectangle=1376x860+0+0
+# bspc rule -a dacs_desk_clerk state=floating center=on focus=on layer=above border=off rectangle=1376x860+0+0
+bspc rule -a dacs_desk_clerk state=floating center=on focus=on layer=above border=off
