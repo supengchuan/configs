@@ -7,3 +7,6 @@ packages = ["default", "polybar", "ubuntu"]
 dpi = 108
 polybar_heigth = "2%"
 polybar_font_size = 18
+wezterm_opacity = 0.96
+wezterm_hide_tab = true
+
