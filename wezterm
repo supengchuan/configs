@@ -105,7 +105,7 @@ end
 
 function SetFont()
 	local M = {
-		font_size = 14,
+		font_size = {{wezterm_font_size}},
 		font = wezterm.font_with_fallback({
 			{ family = "FiraCode Nerd Font Mono", weight = 450, italic = false },
 			{ family = "MesloLGL Nerd Font Mono", weight = "Regular", italic = false },

@@ -10,6 +10,7 @@ wezterm = { target = "~/.config/wezterm/wezterm.lua", type = "template" }
 [default.variables]
 wezterm_opacity = 0.9
 wezterm_hide_tab = false
+wezterm_font_size = 15
 
 [windows]
 [windows.files]

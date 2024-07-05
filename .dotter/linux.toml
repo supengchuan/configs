@@ -9,4 +9,5 @@ polybar_heigth = "2%"
 polybar_font_size = 18
 wezterm_opacity = 0.96
 wezterm_hide_tab = true
+wezterm_font_size = 15
 
