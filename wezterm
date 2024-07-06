@@ -106,6 +106,8 @@ end
 function SetFont()
 	local M = {
 		font_size = {{wezterm_font_size}},
+		underline_thickness = 3,
+		underline_position = -4,
 		font = wezterm.font_with_fallback({
 			{ family = "FiraCode Nerd Font Mono", weight = 450, italic = false },
 			{ family = "MesloLGL Nerd Font Mono", weight = "Regular", italic = false },
@@ -120,18 +122,18 @@ function SetFont()
 			{ family = "LXGW WenKai Screen", weight = "Regular", italic = false },
 		}),
 
-		font_rules = {
-			{
-				intensity = "Normal",
-				italic = true,
-				font = wezterm.font_with_fallback({
-					{ family = "MesloLGS Nerd Font Mono", weight = "Regular", italic = false },
-					{ family = "FiraCode Nerd Font Mono", weight = "Regular", italic = false },
-					{ family = "MesloLGM Nerd Font Mono", weight = "Regular", italic = false },
-					{ family = "JetBrains Mono", weight = "Regular", italic = false },
-				}),
-			},
-		},
+		--font_rules = {
+		--	{
+		--		intensity = "Normal",
+		--		italic = true,
+		--		font = wezterm.font_with_fallback({
+		--			{ family = "MesloLGS Nerd Font Mono", weight = "Regular", italic = false },
+		--			{ family = "FiraCode Nerd Font Mono", weight = "Regular", italic = false },
+		--			{ family = "MesloLGM Nerd Font Mono", weight = "Regular", italic = false },
+		--			{ family = "JetBrains Mono", weight = "Regular", italic = false },
+		--		}),
+		--	},
+		--},
 	}
 
 	return M
