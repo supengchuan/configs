@@ -16,6 +16,8 @@ wezterm_font_size = 15
 [windows.files]
 "change.ahk" = "~/.config/autohotkey/change.ahk"
 "Microsoft.PowerShell_profile.ps1" = "~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1"
+[windows.variables]
+ahk_caps_lock=";"
 
 [ubuntu]
 [ubuntu.files]

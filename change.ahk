@@ -11,7 +11,7 @@
 }
 
 ; change CapsLock to Control
-; CapsLock::Control
+{{ahk_caps_lock}}CapsLock::Control
 
 
 ; change to english in wezterm or code when push esc key if current im is not english
