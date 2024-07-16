@@ -9,7 +9,7 @@ feh --randomize --bg-fill ~/.Pictures/wallhaven-2yxp16.jpg
 pgrep -x polybar >/dev/null || ~/.config/polybar/launch.sh &
 pgrep -x picom >/dev/null || picom &
 #pgrep -x fcitx5 > /dev/null || fcitx5 &
-pgrep autokey >/dev/null || autokey &
+# pgrep autokey >/dev/null || autokey &
 #pgrep -x fcitx > /dev/null || fcitx &
 pgrep -x ibus-daemon >/dev/null || ibus-daemon -rxR &
 
