@@ -33,8 +33,8 @@ cat << "EOF" > out/update_links.sh
 #!/bin/bash
 
 # Define the old and new user
-OLD_USER=""
-NEW_USER=""
+OLD_DIR=""
+NEW_DIR=""
 
 # Loop through all symbolic links in the current directory
 for link in *; do
@@ -45,9 +45,9 @@ for link in *; do
 
 		echo "$current_target"
 		# Check if the target contains the old directory path
-		if [[ "$current_target" == "/home/$OLD_USER"* ]]; then
+		if [[ "$current_target" == "$OLD_DIR"* ]]; then
 			# Replace the old directory path with the new directory path
-			new_target=${current_target/$OLD_USER/$NEW_USER}
+			new_target=${current_target//$OLD_DIR/$NEW_DIR}
 
 			# Remove the old symbolic link
 			rm "$link"
