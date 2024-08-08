@@ -185,8 +185,8 @@ function SetWindow()
 		--window_decorations = "RESIZE",
 		integrated_title_buttons = { "Maximize", "Close" },
 		window_background_opacity = {{ wezterm_opacity }},
-		initial_rows = 30,
-		initial_cols = 120,
+		initial_rows = {{ wezterm_rows }},
+		initial_cols = {{ wezterm_cols }},
 		window_padding = {
 			left = "1cell",
 			right = "0.5cell",

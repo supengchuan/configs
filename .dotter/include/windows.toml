@@ -1,2 +1,4 @@
 [default.variables]
 wezterm_prog = "c:/Users/supengchuan/scoop/apps/pwsh/current/pwsh.exe"
+wezterm_rows = 20
+wezterm_cols = 80

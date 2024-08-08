@@ -11,6 +11,8 @@ wezterm = { target = "~/.config/wezterm/wezterm.lua", type = "template" }
 wezterm_opacity = 0.9
 wezterm_hide_tab = false
 wezterm_font_size = 15
+wezterm_rows = 30
+wezterm_cols = 120
 
 [windows]
 [windows.files]
