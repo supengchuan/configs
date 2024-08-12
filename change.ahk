@@ -59,7 +59,7 @@ ChangeToEnglish() {
 ; Ctrl+Alt+T start a wezterm
 ^!t::
 {
-	Run "C:\Users\supengchuan\scoop\apps\wezterm\current\wezterm-gui.exe start"
+	Run "C:\Users\\{{ username }}\scoop\apps\wezterm\current\wezterm-gui.exe start"
 }
 
 ; 打开词典
