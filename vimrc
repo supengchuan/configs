@@ -1,4 +1,5 @@
 syntax on
+set encoding=utf-8
 set nu
 set paste
 set relativenumber
@@ -28,3 +29,6 @@ inoremap jj <ESC>
 
 vmap <leader>d :g/^\s*$/d<CR> " delete blank lines
 nmap <leader>d :g/^\s*$/d<CR> " delete blank lines
+
+set list
+set lcs=eol:\\u21b5,space:.,tab:>-,trail:-
