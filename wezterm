@@ -212,6 +212,11 @@ function SetKeyMap()
 				mods = "CTRL|SHIFT",
 				action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
 			},
+			{
+				key = "8",
+				mods = "CTRL",
+				action = wezterm.action.PaneSelect,
+			}
 		},
 	}
 
