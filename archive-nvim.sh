@@ -10,12 +10,11 @@ mkdir -p out/data
 cp -r ~/.config/nvim out/config/
 cp -r ~/.local/share/nvim out/data/
 
-
 if [ -f /usr/local/bin/rust-analyzer ]; then
 	sudo cp /usr/local/bin/rust-analyzer out/rust-analyzer
 fi
 
-cat << EOF > out/move.sh
+cat <<EOF >out/move.sh
 #!/bin/bash
 
 rm -rf ~/.config/nvim
@@ -29,7 +28,7 @@ fi
 
 EOF
 
-cat << "EOF" > out/update_links.sh
+cat <<"EOF" >out/update_links.sh
 #!/bin/bash
 
 # Define the old and new user
