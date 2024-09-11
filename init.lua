@@ -40,7 +40,7 @@ vim.wo.colorcolumn = "120"
 vim.o.fileformats = "unix"
 
 -- 自动补全不自动选中
-vim.g.completeopt = "menu,menuone,longest,preview,noselect,noinsert,popup"
+vim.opt.completeopt = "menu,menuone,preview,noinsert,popup"
 
 -- 样式 使neovim支持 termguicolors
 vim.o.termguicolors = true
@@ -152,17 +152,22 @@ end
 vim.api.nvim_create_user_command("SwitchBuffer", SelectAndSwitchBuffer, {})
 vim.keymap.set("n", "<leader>e", "<cmd>SwitchBuffer<cr>", {})
 
-local triggers = { "." }
-vim.api.nvim_create_autocmd("InsertCharPre", {
-	buffer = vim.api.nvim_get_current_buf(),
+-- 使用 autocmd 监听插入模式下的键入事件
+vim.api.nvim_create_autocmd({ "InsertCharPre" }, {
+	pattern = "*",
 	callback = function()
-		if vim.fn.pumvisible() == 1 or vim.fn.state("m") == "m" then
-			return
-		end
-		local char = vim.v.char
-		if vim.list_contains(triggers, char) then
-			local key = vim.keycode("<C-x><C-n>")
-			vim.api.nvim_feedkeys(key, "m", false)
+		local triggers = { " ", "\t", "," }
+		-- 获取当前模式
+		local mode = vim.api.nvim_get_mode().mode
+		-- 只在插入模式下触发
+		if mode == "i" then
+			local char = vim.v.char
+			if not vim.list_contains(triggers, char) then
+				local key = vim.keycode("<C-x><C-n>")
+				vim.api.nvim_feedkeys(key, "m", false)
+			end
+		else
+			print("not in insert mode")
 		end
 	end,
 })
