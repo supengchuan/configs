@@ -50,4 +50,8 @@ function ToNvimCofnigDir {
 }
 Set-Alias -Name cnvim -Value ToNvimCofnigDir
 
+function reloadProfile {
+	. $PROFILE
+}
+Set-Alias -Name reload -Value reloadProfile
 #-------------------------------    Set Alias END     -------------------------------
