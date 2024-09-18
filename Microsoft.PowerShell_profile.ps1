@@ -44,4 +44,10 @@ function OpenCurrentFolder {
 Set-Alias -Name open -Value OpenCurrentFolder
 Set-Alias -Name lz -Value  lazygit.exe
 
+function ToNvimCofnigDir {
+	Set-Location $HOME/AppData/Local/nvim/
+	nvim ./init.lua
+}
+Set-Alias -Name cnvim -Value ToNvimCofnigDir
+
 #-------------------------------    Set Alias END     -------------------------------
