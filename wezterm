@@ -119,7 +119,7 @@ function SetFont()
 			{ family = "DejaVuSansM Nerd Font Mono", weight = "Regular", italic = false },
 			{ family = "Monofur Nerd Font Mono", weight = "Regular", italic = false },
 			{ family = "SauceCodePro Nerd Font Mono", weight = "Regular", italic = false },
-			{ family = "LXGW WenKai Screen", weight = "Regular", italic = false },
+			{ family = "LXGW WenKai", weight = "Regular", italic = false },
 		}),
 
 		--font_rules = {
