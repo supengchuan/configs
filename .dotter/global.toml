@@ -16,12 +16,12 @@ wezterm_cols = 120
 
 [windows]
 [windows.files]
-"change.ahk" = { target = "~/.config/autohotkey/change.ahk" , type = "template"}
+"change.ahk" = { target = "~/.config/autohotkey/change.ahk", type = "template" }
 "Microsoft.PowerShell_profile.ps1" = "~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1"
 
 [windows.variables]
-ahk_caps_lock=";"
-username="supengchuan"
+ahk_caps_lock = ";"
+username = "supengchuan"
 
 [ubuntu]
 [ubuntu.files]
@@ -36,6 +36,7 @@ wallpaper = { target = "~/.Pictures", type = "symbolic" }
 "tmux/mem_usage.sh" = { target = "~/.tmux/plugins/tmux/custom/mem_usage.sh", type = "symbolic" }
 "zsh/zshrc" = { target = "~/.zshrc", type = "template" }
 "zsh/supc.zsh-theme" = { target = "~/.oh-my-zsh/custom/themes/supc.zsh-theme", type = "symbolic" }
+"xbindkeysrc" = { target = "~/.xbindkeysrc", type = "symbolic" }
 
 
 [ubuntu.variables]
