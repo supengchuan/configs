@@ -11,6 +11,8 @@
 }
 
 ; change CapsLock to Control
+; shift+CapsLock as CapsLock
++CapsLock::CapsLock
 {{ahk_caps_lock}}CapsLock::Control
 
 
@@ -96,5 +98,13 @@ DesktopIcons( Show:=-1 )
 }
 
 
-
+; simulate down or up using ctrl+n and ctrl+p in chrome
+#HotIf WinActive("ahk_exe chrome.exe")
+^n::{
+	send "{Down}"
+}
+^p::{
+	send "{Up}"
+}
+#HotIf
 
