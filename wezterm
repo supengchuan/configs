@@ -216,7 +216,7 @@ function SetKeyMap()
 				key = "8",
 				mods = "CTRL",
 				action = wezterm.action.PaneSelect,
-			}
+			},
 			{
 				key = "h",
 				mods = "ALT",
