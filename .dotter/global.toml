@@ -32,8 +32,7 @@ Xmodmap = "~/.Xmodmap"
 Xresources = { target = "~/.Xresources", type = "template" }
 wallpaper = { target = "~/.Pictures", type = "symbolic" }
 "tmux.conf" = { target = "~/.tmux.conf", type = "symbolic" }
-"tmux/memory.sh" = { target = "~/.tmux/plugins/tmux/custom/memory.sh", type = "symbolic" }
-"tmux/mem_usage.sh" = { target = "~/.tmux/plugins/tmux/custom/mem_usage.sh", type = "symbolic" }
+"tmux/mem_usage.sh" = { target = "~/.config/tmux/custom/mem_usage.sh", type = "symbolic" }
 "zsh/zshrc" = { target = "~/.zshrc", type = "template" }
 "zsh/supc.zsh-theme" = { target = "~/.oh-my-zsh/custom/themes/supc.zsh-theme", type = "symbolic" }
 "xbindkeysrc" = { target = "~/.xbindkeysrc", type = "symbolic" }
