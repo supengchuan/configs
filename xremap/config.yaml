@@ -1,0 +1,10 @@
+modmap:
+  - name: Global
+    remap:
+      # CapsLock -> Ctrl_L
+      CapsLock: Ctrl_L
+
+keymap:
+  - name: global
+    remap:
+      SHIFT-Esc: SHIFT-KEY_GRAVE # remap shift+esc to ~
