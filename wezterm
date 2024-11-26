@@ -239,7 +239,7 @@ function SetKeyMap()
 			},
 			{
 				-- set tab title
-				key = "E",
+				key = "O",
 				mods = "CTRL|SHIFT",
 				action = wezterm.action.PromptInputLine({
 					description = "Enter new name for tab",
