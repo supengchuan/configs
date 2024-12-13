@@ -36,7 +36,8 @@ wallpaper = { target = "~/.Pictures", type = "symbolic" }
 "zsh/zshrc" = { target = "~/.zshrc", type = "template" }
 "zsh/supc.zsh-theme" = { target = "~/.oh-my-zsh/custom/themes/supc.zsh-theme", type = "symbolic" }
 "xbindkeysrc" = { target = "~/.xbindkeysrc", type = "symbolic" }
-
+"xremap/config.yaml" = { target = "~/.config/xremap/config.yaml", type = "symbolic" }
+"xremap/xremap.service" = { target = "~/.config/systemd/user/xremap.service", type="template" }
 
 [ubuntu.variables]
 dpi = "108"
@@ -52,4 +53,5 @@ username = "supc"
 
 [polybar.variables]
 polybar_heigth = "2%"
+polybar_offset_y = "0.6%"
 polybar_font_size = 18
