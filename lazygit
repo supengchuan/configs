@@ -1,0 +1,16 @@
+gui:
+  # One of 'auto' (default) | 'en' | 'zh-CN' | 'zh-TW' | 'pl' | 'nl' | 'ja' | 'ko' | 'ru'
+  language: 'zh-CN'
+
+  # Nerd fonts version to use.
+  # One of: '2' | '3' | empty string (default)
+  # If empty, do not show icons.
+  nerdFontsVersion: "3"
+  # Window border style.
+  # One of 'rounded' (default) | 'single' | 'double' | 'hidden'
+  border: 'single'
+
+git:
+  # If true, parse emoji strings in commit messages e.g. render :rocket: as 🚀
+  # (This should really be under 'gui', not 'git')
+  parseEmoji: false
