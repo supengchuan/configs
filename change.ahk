@@ -64,6 +64,10 @@ ChangeToEnglish() {
 	Run "C:\Users\\{{ username }}\scoop\apps\wezterm\current\wezterm-gui.exe start"
 }
 
+!g::{
+	Run "C:\Program Files\Google\Chrome\Application\chrome.exe  --incognito www.google.com"
+}
+
 ; 打开词典
 ^!i::{
 	if WinExist("ahk_exe eudic.exe") {
