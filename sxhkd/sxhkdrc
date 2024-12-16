@@ -36,7 +36,7 @@ alt + m
 
 # program launcher
 alt + d
-	dmenu_run -fn 'FiraCode Nerd Font Mono-16'
+	dmenu_run -b -fn 'FiraCode Nerd Font Mono-16'
 	#/bin/bash /home/supc/.config/rofi/launcher.sh
 
 # run app launch
