@@ -65,7 +65,7 @@ ChangeToEnglish() {
 }
 
 !g::{
-	Run "C:\Program Files\Google\Chrome\Application\chrome.exe  --incognito www.google.com"
+	Run "C:\Program Files\Google\Chrome\Application\chrome.exe  www.google.com"
 }
 
 ; 打开词典
