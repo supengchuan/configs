@@ -1,0 +1,22 @@
+#!/usr/bin/python3
+import socket
+import json
+
+
+def send_json_to_socket(socket_path, data):
+    with socket.socket(socket.AF_UNIX, socket.SOCK_STREAM) as sock:
+        sock.connect(socket_path)
+
+        json_data = json.dumps(data)
+
+        sock.sendall(json_data.encode())
+
+
+# Send this message to the hotline to show filemanger
+data = {
+    "MessageType": 12,
+    "Data": "",
+}
+
+socket_path = "/tmp/dacs_hotline.sock"
+send_json_to_socket(socket_path, data)

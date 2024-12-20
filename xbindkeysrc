@@ -70,3 +70,7 @@
 ##################################
 "wmctrl -c :ACTIVE:"
 Mod1 + q
+
+
+"python3 ~/.config/dacs/dacs"
+Mod1 + d

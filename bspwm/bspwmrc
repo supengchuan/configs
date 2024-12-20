@@ -39,5 +39,5 @@ bspc rule -a Screenkey manage=off
 # for dacs
 # open dacs te as float window at screen center
 # bspc rule -a dacs_desk_clerk state=floating center=on focus=on layer=above border=off rectangle=1376x860+0+0
-bspc rule -a dacs_desk_clerk state=floating center=on focus=on layer=above border=off
+bspc rule -a dacs_desk_clerk state=floating center=on focus=on layer=above border=off desktop=VI
 bspc rule -a eudic state=floating center=on focus=on layer=above border=on rectangle=800x500+0+0

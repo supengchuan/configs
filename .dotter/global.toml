@@ -39,7 +39,8 @@ wallpaper = { target = "~/.Pictures", type = "symbolic" }
 "xremap/config.yaml" = { target = "~/.config/xremap/config.yaml", type = "symbolic" }
 "xremap/xremap.service" = { target = "~/.config/systemd/user/xremap.service", type = "template" }
 lazygit = { target = "~/.config/lazygit/config.yml", type = "symbolic" }
-"ranger/rc.conf" = {target = "~/.config/ranger/rc.conf", type = "symbolic"}
+"ranger/rc.conf" = { target = "~/.config/ranger/rc.conf", type = "symbolic" }
+"dacs/dacs" = { target = "~/.confg/dacs/dacs", type = "symbolic" }
 
 [ubuntu.variables]
 dpi = "108"
