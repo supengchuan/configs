@@ -54,4 +54,5 @@ function reloadProfile {
 	. $PROFILE
 }
 Set-Alias -Name reload -Value reloadProfile
+Set-Alias -Name yz -Value yazi.exe
 #-------------------------------    Set Alias END     -------------------------------
