@@ -26,7 +26,7 @@ EOF
 
 chmod +x ./tmux-out/move.sh
 
-tar -zcvf tmux-out.tar.gz tmux-out
+tar -zcf tmux-out.tar.gz tmux-out
 
 rm -rf tmux-out
 

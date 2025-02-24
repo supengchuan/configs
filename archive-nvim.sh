@@ -61,5 +61,5 @@ done
 EOF
 
 chmod +x out/move.sh out/update_links.sh
-tar -zcvf out.tar.gz out
+tar -zcf out.tar.gz out
 rm -rf out
