@@ -9,9 +9,8 @@ super + alt + {q,r}
 #
 # wm independent hotkeys
 #
-#alt + Return
-#	wezterm start --cwd . --always-new-process
-#	#alacritty --option font.size=11
+super + Return
+	alacritty --option font.size={{alacritty-font-size}}
 
 ctrl + alt + i
 	/usr/share/eusoft-eudic/AppRun %F
@@ -45,7 +44,7 @@ alt + space
 
 # run powermenu
 alt + ctrl + e
-	~/.config/rofi/powermenu/type-6/powermenu.sh	
+	~/.config/rofi/powermenu/type-6/powermenu.sh
 
 #
 # bspwm hotkeys

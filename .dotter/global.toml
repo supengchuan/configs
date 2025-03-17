@@ -27,7 +27,7 @@ username = "supengchuan"
 [ubuntu]
 [ubuntu.files]
 bspwm = "~/.config/bspwm"
-sxhkd = "~/.config/sxhkd"
+sxhkd = {target="~/.config/sxhkd", type = "template"}
 rofi = { target = "~/.config/rofi", type = "symbolic" }
 Xmodmap = "~/.Xmodmap"
 Xresources = { target = "~/.Xresources", type = "template" }
@@ -50,6 +50,7 @@ lazygit = { target = "~/.config/lazygit/config.yml", type = "symbolic" }
 [ubuntu.variables]
 dpi = "108"
 username = "supc"
+alacritty-font-size="16"
 
 [polybar]
 [polybar.files]

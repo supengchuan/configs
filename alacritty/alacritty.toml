@@ -3,9 +3,11 @@
 opacity = 1
 
 [font]
-normal = { family = "FiraCode Nerd Font"}
+#normal = { family = "FiraCode Nerd Font"}
+normal = { family = "Cousine Nerd Font"}
 
-size = 17
+# UbuntuSansMono Nerd Font
+size = 16
 
 
 # Dracula theme for Alacritty
