@@ -26,9 +26,9 @@ alt + g
 	google-chrome
 
 # lock screen
-super + l
-	i3lock -e -c 000000 -t -i ~/Pictures/Wallpapers/wallhaven-pk6y2p.png
-
+#super + l
+#	i3lock -e -c 000000 -t -i ~/Pictures/Wallpapers/wallhaven-pk6y2p.png
+#
 # start qq-music
 alt + m
 	qqmusic --no-sandbox
