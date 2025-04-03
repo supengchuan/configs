@@ -21,7 +21,7 @@ configuration {
 
 /*****----- Global Properties -----*****/
 * {
-    font:                        "Iosevka Nerd Font 10";
+    font:                        "FiraCode Nerd Font Mono 12";
 }
 
 /*****----- Main Window -----*****/
@@ -31,7 +31,7 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       800px;
+    width:                       900px;
     x-offset:                    0px;
     y-offset:                    0px;
 
@@ -39,9 +39,10 @@ window {
     enabled:                     true;
     margin:                      0px;
     padding:                     0px;
-    border-radius:               20px;
+    border-radius:               10px;
     cursor:                      "default";
     background-color:            #22272C;
+    background-image:          url("~/.config/rofi/images/j.jpg", width);
 }
 
 /*****----- Main Box -----*****/
@@ -138,7 +139,7 @@ element-icon {
 }
 element-text {
     background-color:            inherit;
-    text-color:                  inherit;
+    text-color:                  white;
     cursor:                      inherit;
     vertical-align:              0.5;
     horizontal-align:            0.0;
@@ -148,14 +149,16 @@ element-text {
 mode-switcher{
     enabled:                     true;
     expand:                      false;
-    spacing:                     0px;
+    spacing:                     20px;
     margin:                      0px 200px;
-    padding:                     12px;
+    padding:                     6px;
     border-radius:               100%;
-    background-color:            #2E343B;
+    background-color:            #2E343B44;
 }
 button {
     background-color:            inherit;
+    border-radius:               100%;
+    padding:                     6px;
     text-color:                  white;
     cursor:                      pointer;
 }
