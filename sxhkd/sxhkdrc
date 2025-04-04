@@ -44,7 +44,7 @@ alt + space
 
 # run powermenu
 alt + ctrl + e
-	~/.config/rofi/powermenu/type-6/powermenu.sh
+	~/.config/rofi/powermenu.sh
 
 #
 # bspwm hotkeys
