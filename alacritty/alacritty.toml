@@ -4,11 +4,15 @@ opacity = 1
 
 [font]
 #normal = { family = "FiraCode Nerd Font"}
-normal = { family = "Cousine Nerd Font"}
+normal = { family = "Cousine Nerd Font" }
 
 # UbuntuSansMono Nerd Font
 size = 16
+[selection]
+save_to_clipboard = true
 
+[mouse]
+bindings = [{ mouse = "Right", action = "Paste" }]
 
 # Dracula theme for Alacritty
 # https://draculatheme.com/alacritty
@@ -86,4 +90,3 @@ background = "#f1fa8c"
 
 foreground = "#f1fa8c"
 background = "#282a36"
-
