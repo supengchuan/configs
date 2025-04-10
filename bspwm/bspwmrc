@@ -1,17 +1,25 @@
 #! /bin/sh
 
+top_padding_size=45
+if command -v xrandr > /dev/null 2>&1; then
+	height=$(xrandr | grep '*' | awk '{print $1}' | cut -d'x' -f2)
+	if [ -n "$height" ]; then
+		top_padding_size=$(awk "BEGIN { printf \"%d\", $height * 0.03 }")
+	fi
+fi
+
 setxkbmap -layout us
 # custom keymap
 #[ -f ~/.Xmodmap ] && xmodmap ~/.Xmodmap
 
-pgrep -x sxhkd >/dev/null || sxhkd &
+pgrep -x sxhkd > /dev/null || sxhkd &
 feh --randomize --bg-fill ~/.Pictures/wallhaven-2yxp16.jpg
-pgrep -x polybar >/dev/null || ~/.config/polybar/launch.sh &
-pgrep -x picom >/dev/null || picom &
+pgrep -x polybar > /dev/null || ~/.config/polybar/launch.sh &
+pgrep -x picom > /dev/null || picom &
 #pgrep -x fcitx5 > /dev/null || fcitx5 &
 # pgrep autokey >/dev/null || autokey &
 #pgrep -x fcitx > /dev/null || fcitx &
-pgrep -x ibus-daemon >/dev/null || ibus-daemon -rxR &
+pgrep -x ibus-daemon > /dev/null || ibus-daemon -rxR &
 
 #pgrep -x clash > /dev/null || /opt/clash/clash &
 vmware-user-suid-wrapper
@@ -25,7 +33,7 @@ bspc config split_ratio 0.50
 bspc config borderless_monocle true
 #bspc config gapless_monocle false
 bspc config window_gap 0
-bspc config top_padding 5
+bspc config top_padding "$top_padding_size"
 bspc config bottom_padding 20
 bspc config left_padding 10
 bspc config right_padding 10
