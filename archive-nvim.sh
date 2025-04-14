@@ -24,30 +24,33 @@ EOF
 cat << "EOF" > out/update_links.sh
 #!/bin/bash
 
-# Define the old and new user
-OLD_DIR=""
-NEW_DIR=""
+set -euo pipefail
 
-# Loop through all symbolic links in the current directory
+OLD_DIR="${1:-/home/supc}"
+NEW_DIR="${2:-/root}"
+
+if [[ -z "$OLD_DIR" || -z "$NEW_DIR" ]]; then
+	echo "Usage: $0 OLD_DIR NEW_DIR"
+	exit 1
+fi
+
 for link in *; do
-	# Check if it is a symbolic link
-	if [ -L "$link" ]; then
-		# Get the current target of the symbolic link
+	echo "$link"
+	if [ -L "$link" ] && [ ! -d "$link" ]; then
 		current_target=$(readlink "$link")
-
-		echo "$current_target"
-		# Check if the target contains the old directory path
+		echo "$current_target "
+		echo "$OLD_DIR"
 		if [[ "$current_target" == "$OLD_DIR"* ]]; then
-			# Replace the old directory path with the new directory path
-			new_target=${current_target//$OLD_DIR/$NEW_DIR}
+			new_target="${current_target/#$OLD_DIR/$NEW_DIR}"
 
-			# Remove the old symbolic link
+			echo "Updating $link:"
+			echo "  old -> $current_target"
+			echo "  new -> $new_target"
+
 			rm "$link"
-
-			# Create a new symbolic link with the updated target
 			ln -s "$new_target" "$link"
-
-			echo "Updated $link -> $new_target"
+		else
+			echo "not matched "
 		fi
 	fi
 done
