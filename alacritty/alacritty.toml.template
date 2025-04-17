@@ -14,6 +14,12 @@ save_to_clipboard = true
 [mouse]
 bindings = [{ mouse = "Right", action = "Paste" }]
 
+
+{{#if (eq dotter.os "windows")}}
+[terminal]
+shell="c:/Users/supc/scoop/apps/pwsh/current/pwsh.exe"
+{{/if}}
+
 # Dracula theme for Alacritty
 # https://draculatheme.com/alacritty
 #

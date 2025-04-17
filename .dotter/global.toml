@@ -19,6 +19,7 @@ wezterm_cols = 120
 "change.ahk" = { target = "~/.config/autohotkey/change.ahk", type = "template" }
 "Microsoft.PowerShell_profile.ps1" = "~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1"
 "yazi/yazi.toml" = { target = "~/AppData/Roaming/yazi/config/yazi.toml", type = "template" }
+"alacritty/alacritty.toml.template" = { target = "~/AppData/Roaming/alacritty/alacritty.toml", type = "template" }
 
 [windows.variables]
 ahk_caps_lock = ";"
@@ -43,7 +44,7 @@ lazygit = { target = "~/.config/lazygit/config.yml", type = "symbolic" }
 "ranger/rc.conf" = { target = "~/.config/ranger/rc.conf", type = "symbolic" }
 "dacs/dacs" = { target = "~/.config/dacs/dacs", type = "symbolic" }
 "yazi/yazi.toml" = { target = "~/.config/yazi/yazi.toml", type = "symbolic" }
-"alacritty/alacritty.toml" = { target = "~/.config/alacritty/alacritty.toml", type = "symbolic" }
+"alacritty/alacritty.toml.template" = { target = "~/.config/alacritty/alacritty.toml", type = "template" }
 "alacritty/alacritty.png" = { target = "~/.local/share/icons/alacritty.png", type = "symbolic" }
 "alacritty/alacritty.desktop" = {target = "~/.local/share/applications/alacritty.desktop", type = "symbolic"}
 
