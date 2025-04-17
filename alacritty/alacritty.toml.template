@@ -7,7 +7,7 @@ opacity = 1
 normal = { family = "Cousine Nerd Font" }
 
 # UbuntuSansMono Nerd Font
-size = 16
+size = {{alacritty_font_size}}
 [selection]
 save_to_clipboard = true
 

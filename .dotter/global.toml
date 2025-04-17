@@ -13,6 +13,7 @@ wezterm_hide_tab = false
 wezterm_font_size = 15
 wezterm_rows = 30
 wezterm_cols = 120
+alacritty_font_size = 16
 
 [windows]
 [windows.files]
@@ -28,7 +29,7 @@ username = "supengchuan"
 [ubuntu]
 [ubuntu.files]
 bspwm = "~/.config/bspwm"
-sxhkd = {target="~/.config/sxhkd", type = "template"}
+sxhkd = { target = "~/.config/sxhkd", type = "template" }
 rofi = { target = "~/.config/rofi", type = "symbolic" }
 Xmodmap = "~/.Xmodmap"
 Xresources = { target = "~/.Xresources", type = "template" }
@@ -46,12 +47,11 @@ lazygit = { target = "~/.config/lazygit/config.yml", type = "symbolic" }
 "yazi/yazi.toml" = { target = "~/.config/yazi/yazi.toml", type = "symbolic" }
 "alacritty/alacritty.toml.template" = { target = "~/.config/alacritty/alacritty.toml", type = "template" }
 "alacritty/alacritty.png" = { target = "~/.local/share/icons/alacritty.png", type = "symbolic" }
-"alacritty/alacritty.desktop" = {target = "~/.local/share/applications/alacritty.desktop", type = "symbolic"}
+"alacritty/alacritty.desktop" = { target = "~/.local/share/applications/alacritty.desktop", type = "symbolic" }
 
 [ubuntu.variables]
 dpi = "108"
 username = "supc"
-alacritty-font-size="16"
 
 [polybar]
 [polybar.files]

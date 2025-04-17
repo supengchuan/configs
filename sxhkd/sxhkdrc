@@ -10,7 +10,7 @@ super + alt + {q,r}
 # wm independent hotkeys
 #
 super + Return
-	alacritty --option font.size={{alacritty-font-size}}
+	alacritty --option font.size={{alacritty_font_size}}
 
 ctrl + alt + i
 	/usr/share/eusoft-eudic/AppRun %F
