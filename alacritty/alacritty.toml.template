@@ -1,6 +1,7 @@
 
 [window]
 opacity = 1
+dynamic_padding = true
 
 [font]
 #normal = { family = "FiraCode Nerd Font"}
