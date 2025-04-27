@@ -39,6 +39,12 @@ bspc config left_padding 10
 bspc config right_padding 10
 bspc config single_monocle true
 
+# use alt key to active mouse pointer to move and resize floating window  
+# hold alt and left-button to move window
+# hold alt and right-button to resize window
+# hold alt and middle-button also can resize window
+bspc config pointer_modifier mod1
+
 bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a Chromium desktop='^2'
 bspc rule -a mplayer2 state=floating
