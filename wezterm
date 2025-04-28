@@ -155,6 +155,7 @@ function SetColorTheme()
 	color = "Catppuccin Frappe"
 	color = "Catppuccin Mocha"
 	color = "Dracula"
+	color = "Dracula (Official)"
 
 	return {
 		color_scheme = color,
@@ -292,26 +293,35 @@ config = Merge(config, SetColorTheme())
 config = Merge(config, SetKeyMap())
 config = Merge(config, SetMouseMap())
 
--- dynamic window_padding
-local center_content = function(window, pane)
-	local win_dim = window:get_dimensions()
-	local tab_dim = pane:tab():get_size()
+-- 主要是需要通过一个 cell 的大小来计算有多少空余可以作为 padding
+-- 然后在 top 位置上进行 padding, 如果直接使用 pane 的 get_dimensions, 
+-- 拿到的直可能比实际可用的直小很多，从而padding的黑边比较大
+local center = function(window, _)
 	local overrides = window:get_config_overrides() or {}
-	local padding_left = (win_dim.pixel_width - tab_dim.pixel_width) / 2
-	local padding_top = (win_dim.pixel_height - tab_dim.pixel_height) / 2
+	local tabsz = window:active_tab():get_size()
+	local cellheight = tabsz.pixel_height / tabsz.rows
+	local cellwidth = tabsz.pixel_width / tabsz.cols
+
+	local win_dim = window:get_dimensions()
+	local window_height = win_dim.pixel_height
+	local window_width = win_dim.pixel_width
+
+	local pane_height = math.floor(window_height / cellheight) * cellheight
+	local pand_width = math.floor(window_width / cellwidth) * cellwidth
+
 	local new_padding = {
-		left = padding_left,
+		left = math.floor((window_width - pand_width) / 2),
 		right = 0,
-		top = padding_top,
+		top = math.floor((window_height - pane_height) / 2),
 		bottom = 0,
 	}
-	if overrides.window_padding and new_padding.left == overrides.window_padding.left then
+	if overrides.window_padding and new_padding.top == overrides.window_padding.top then
 		return
 	end
 	overrides.window_padding = new_padding
 	window:set_config_overrides(overrides)
 end
 
-wezterm.on("window-resized", center_content)
-wezterm.on("window-config-reloaded", center_content)
+wezterm.on("window-resized", center)
+wezterm.on("window-config-reloaded", center)
 return config
