@@ -1,0 +1,39 @@
+customization:
+  distribution_code_name: Weasel
+  distribution_version: 0.16.3
+  generator: "Weasel::UIStyleSettings"
+  modified_time: "Mon Mar 10 16:04:31 2025"
+  rime_version: 1.11.2
+patch:
+  "preset_color_schemes/win10":
+    author: me
+    back_color: 0xF3F3F3
+    border_color: 0xDBDCDC
+    candidate_text_color: 0x000000
+    hilited_candidate_back_color: 0xFFD8A6 #取色来自win10默认，有需要自己调一下，记得是BGR
+    hilited_label_color: 0x6F6F6F
+    hilited_mark_color: 0x00000000
+    label_color: 0x6F6F6F
+    name: Windows10
+    shadow_color: 0x4DFDFDFD
+    text_color: 0x000000
+  "style/enable_mouse": true #这里之后的引号可有可无，我改的时候没删，控制鼠标选词
+  "style/color_scheme": win10
+  "style/font_point": 15
+  "style/horizontal": false
+  "style/inline_preedit": false
+  "style/label_font_point": 14
+  "style/label_format": "%s."
+  "style/layout/border_width": 1 #边框线粗细
+  "style/layout/candidate_spacing": 5
+  "style/layout/corner_radius": 5 #高亮框圆角
+  "style/layout/hilite_padding": 5
+  "style/layout/hilite_spacing": 10 #候选词和序号之间的距离，没找到能控制高亮框的长度的，导致高亮框右侧边距有点小
+  "style/layout/margin_x": 5
+  "style/layout/margin_y": 5
+  "style/layout/round_corner": 5 #候选框圆角
+  "style/layout/shadow_offset_x": 5
+  "style/layout/shadow_offset_y": 4
+  "style/layout/shadow_radius": 5
+  "style/layout/min_width": 160
+  "style/mark_text": " "

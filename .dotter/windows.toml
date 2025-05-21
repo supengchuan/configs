@@ -2,3 +2,6 @@ includes = [".dotter/include/windows.toml"]
 packages = ["default", "windows"]
 
 [files]
+"rime/windows/default.custom.yaml" = { target = "~/AppData/Roaming/rime/default.custom.yaml", type = "template" }
+"rime/windows/double_pinyin_flypy.custom.yaml" = { target = "~/AppData/Roaming/rime/double_pinyin_flypy.custom.yaml", type = "template" }
+"rime/windows/weasel.custom.yaml" = { target = "~/AppData/Roaming/rime/weasel.custom.yaml", type = "template" }
