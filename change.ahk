@@ -128,7 +128,7 @@ KeepNvimWarm(*) {
             Run("nvim.exe", , "Hide", &pid)
 
             ; Wait for 10 seconds to let it initialize
-            Sleep 10000
+            Sleep 20000
 
             ; Close Neovim process
             ProcessClose(pid)
