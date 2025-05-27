@@ -112,3 +112,29 @@ DesktopIcons( Show:=-1 )
 }
 #HotIf
 
+
+#Requires AutoHotkey v2.0+
+Persistent
+
+; this timer will start neovim Program to make neovim is warm state
+; it can avoid cold startup
+SetTimer(KeepNvimWarm, 600000) ; 10 minutes in milliseconds
+
+KeepNvimWarm(*) {
+    try {
+        ; Run Neovim (change the path if needed)
+        pid := ProcessExist("nvim.exe")
+        if !pid {
+            Run("nvim.exe", , "Hide", &pid)
+
+            ; Wait for 10 seconds to let it initialize
+            Sleep 10000
+
+            ; Close Neovim process
+            ProcessClose(pid)
+        }
+    } catch Error as err {
+        MsgBox("Error: " err.Message)
+    }
+}
+
