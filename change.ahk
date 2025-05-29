@@ -123,7 +123,8 @@ SetTimer(KeepNvimWarm, 600000) ; 10 minutes in milliseconds
 KeepNvimWarm(*) {
     try {
         ; Run Neovim (change the path if needed)
-        pid := ProcessExist("nvim.exe")
+        ; pid := ProcessExist("nvim.exe")
+		pid := 0
         if !pid {
             Run("nvim.exe", , "Hide", &pid)
 
