@@ -17,7 +17,9 @@ alacritty_font_size = 16
 
 [windows]
 [windows.files]
-"change.ahk" = { target = "~/.config/autohotkey/change.ahk", type = "template" }
+"ahk/change.ahk" = { target = "~/.config/autohotkey/change.ahk", type = "template" }
+"ahk/show-eudic.ahk" = {target = "~/.config/autohotkey/show-eudic.ahk", type = "template"}
+
 "Microsoft.PowerShell_profile.ps1" = "~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1"
 "yazi/yazi.toml" = { target = "~/AppData/Roaming/yazi/config/yazi.toml", type = "template" }
 "alacritty/alacritty.toml.template" = { target = "~/AppData/Roaming/alacritty/alacritty.toml", type = "template" }

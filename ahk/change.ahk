@@ -1,4 +1,5 @@
 #Include "quick-input.ahk"
+#Include "show-eudic.ahk"
 
 ; ctrl+alt+r reload script
 ^!r::{
@@ -68,17 +69,6 @@ ChangeToEnglish() {
 	Run "C:\Program Files\Google\Chrome\Application\chrome.exe  www.google.com"
 }
 
-; 打开词典
-^!i::{
-	if WinExist("ahk_exe eudic.exe") {
-		WinActivate
-	} else {
-		Run "C:\Program Files\eudic\eudic.exe"
-		if WinExist("ahk_exe eudic.exe") {
-			WinActivate
-		}
-	}
-}
 
 ; shift+ esc output ~
 +Esc::Send "~"
