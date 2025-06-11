@@ -1,5 +1,6 @@
 #Include "quick-input.ahk"
 #Include "show-eudic.ahk"
+#Include "center.ahk"
 
 ; ctrl+alt+r reload script
 ^!r::{
@@ -62,7 +63,7 @@ ChangeToEnglish() {
 ; Ctrl+Alt+T start a wezterm
 ^!t::
 {
-	Run "C:\Users\\{{ username }}\scoop\apps\wezterm\current\wezterm-gui.exe start"
+	Run "C:\Users\\{{ username }}\scoop\apps\wezterm-nightly\current\wezterm-gui.exe start"
 }
 
 !g::{
