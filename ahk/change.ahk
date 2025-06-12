@@ -61,7 +61,8 @@ ChangeToEnglish() {
 }
 
 ; Ctrl+Alt+T start a wezterm
-^!t::
+;; change to alt+w
+!w::
 {
 	Run "C:\Users\\{{ username }}\scoop\apps\wezterm-nightly\current\wezterm-gui.exe start"
 }
