@@ -20,6 +20,7 @@ alacritty_font_size = 16
 "ahk/change.ahk" = { target = "~/.config/autohotkey/change.ahk", type = "template" }
 "ahk/show-eudic.ahk" = {target = "~/.config/autohotkey/show-eudic.ahk", type = "template"}
 "ahk/center.ahk" = {target = "~/.config/autohotkey/center.ahk", type = "template"}
+"ahk/easy_drag.ahk" = {target = "~/.config/autohotkey/easy_drag.ahk", type = "template"}
 
 "Microsoft.PowerShell_profile.ps1" = "~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1"
 "yazi/yazi.toml" = { target = "~/AppData/Roaming/yazi/config/yazi.toml", type = "template" }

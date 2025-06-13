@@ -18,7 +18,7 @@ bindings = [{ mouse = "Right", action = "Paste" }]
 
 {{#if (eq dotter.os "windows")}}
 [terminal]
-shell= "c:/Users/{{username}}/scoop/apps/pwsh/current/pwsh.exe"
+shell= "c:/Program Files/nu/bin/nu.exe"
 {{/if}}
 
 # Dracula theme for Alacritty

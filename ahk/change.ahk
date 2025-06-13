@@ -1,6 +1,7 @@
 #Include "quick-input.ahk"
 #Include "show-eudic.ahk"
 #Include "center.ahk"
+#Include "easy_drag.ahk"
 
 ; ctrl+alt+r reload script
 ^!r::{
