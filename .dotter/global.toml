@@ -18,17 +18,26 @@ alacritty_font_size = 16
 [windows]
 [windows.files]
 "ahk/change.ahk" = { target = "~/.config/autohotkey/change.ahk", type = "template" }
-"ahk/show-eudic.ahk" = {target = "~/.config/autohotkey/show-eudic.ahk", type = "template"}
-"ahk/center.ahk" = {target = "~/.config/autohotkey/center.ahk", type = "template"}
-"ahk/easy_drag.ahk" = {target = "~/.config/autohotkey/easy_drag.ahk", type = "template"}
+"ahk/show-eudic.ahk" = { target = "~/.config/autohotkey/show-eudic.ahk", type = "template" }
+"ahk/center.ahk" = { target = "~/.config/autohotkey/center.ahk", type = "template" }
+"ahk/easy_drag.ahk" = { target = "~/.config/autohotkey/easy_drag.ahk", type = "template" }
 
 "Microsoft.PowerShell_profile.ps1" = "~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1"
 "yazi/yazi.toml" = { target = "~/AppData/Roaming/yazi/config/yazi.toml", type = "template" }
 "alacritty/alacritty.toml.template" = { target = "~/AppData/Roaming/alacritty/alacritty.toml", type = "template" }
 
+
 [windows.variables]
 ahk_caps_lock = ";"
 username = "supengchuan"
+
+[windows-nushell]
+[windows-nushell.files]
+"nushell/windows/config.nu" = { target = "~/AppData/Roaming/nushell/config.nu", type = "template" }
+"nushell/windows/zoxide.nu" = { target = "~/AppData/Roaming/nushell/zoxide.nu", type = "template" }
+"nushell/windows/starship.nu" = { target = "~/AppData/Roaming/nushell/vendor/autoload/starship.nu", type = "template" }
+"nushell/windows/starship.toml" = { target = "~/.config/starship.toml", type = "template" }
+
 
 [ubuntu]
 [ubuntu.files]

@@ -1,0 +1,40 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = '''
+$directory$username$time
+[└─>](bold green) '''
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true
+
+[git_branch]
+disabled = true
+
+[git_commit]
+disabled = true
+
+[git_status]
+disabled = true
+
+[git_state]
+disabled = true
+
+[directory]
+disabled = false
+truncate_to_repo = false
+style = "bold blue"
+format ='[](bold green) [$path]($style) [󰄛](bold green) [$read_only]($read_only_style) '
+truncation_symbol = '...\'
+
+[lua]
+disabled = true
+
+[username]
+disabled = false
+[time]
+disabled = false
