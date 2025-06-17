@@ -41,7 +41,7 @@ username = "supengchuan"
 
 [ubuntu]
 [ubuntu.files]
-bspwm = "~/.config/bspwm"
+"bspwm/bspwmrc" = {target = "~/.config/bspwm/bspwmrc", type = "template" }
 sxhkd = { target = "~/.config/sxhkd", type = "template" }
 rofi = { target = "~/.config/rofi", type = "symbolic" }
 Xmodmap = "~/.Xmodmap"

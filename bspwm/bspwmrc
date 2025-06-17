@@ -4,7 +4,7 @@ top_padding_size=45
 if command -v xrandr > /dev/null 2>&1; then
 	height=$(xrandr | grep '*' | awk '{print $1}' | cut -d'x' -f2)
 	if [ -n "$height" ]; then
-		top_padding_size=$(awk "BEGIN { printf \"%d\", $height * 0.03 }")
+		top_padding_size=$(awk "BEGIN { printf \"%d\", $height * {{bspwm_top_padding}} }")
 	fi
 fi
 
