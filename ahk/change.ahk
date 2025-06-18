@@ -66,6 +66,13 @@ ChangeToEnglish() {
 !w::
 {
 	Run "C:\Users\\{{ username }}\scoop\apps\wezterm-nightly\current\wezterm-gui.exe start"
+	{{#if run_wezterm_secondary }}
+	if WinWait("ahk_exe wezterm-gui.exe", , 2) {
+		SwapWindowScreen()
+	} else {
+		MsgBox "wait window active timeout"
+	}
+	{{/if}}
 }
 
 !g::{
