@@ -1,5 +1,5 @@
 includes = [".dotter/include/windows.toml"]
-packages = ["default", "windows"]
+packages = ["default", "windows", "windows-nushell"]
 
 [files]
 "rime/windows/default.custom.yaml" = { target = "~/AppData/Roaming/rime/default.custom.yaml", type = "template" }
