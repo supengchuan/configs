@@ -68,7 +68,7 @@ vim.keymap.set("n", "<c-n>", "<cmd>Lex<cr>", { silent = true })
 --------------------------------------------------------------
 --- auto command
 ---------------------------------------------------------------
-local myAutoGroup = vim.api.nvim_create_augroup("myAutoGroup", {
+local simpleAutoGroup = vim.api.nvim_create_augroup("myAutoGroup", {
 	clear = true,
 })
 
@@ -76,18 +76,18 @@ local autocmd = vim.api.nvim_create_autocmd
 
 -- 进入Terminal 自动进入插入模式
 autocmd("TermOpen", {
-	group = myAutoGroup,
+	group = simpleAutoGroup,
 	command = "startinsert",
 })
 -- 自动保存
 autocmd({ "InsertLeave", "TextChanged" }, {
-	group = myAutoGroup,
+	group = simpleAutoGroup,
 	pattern = { "*" },
 	command = "silent! wall",
 })
 
 autocmd("BufWritePre", {
-	group = myAutoGroup,
+	group = simpleAutoGroup,
 	pattern = { "*" },
 	callback = function()
 		local fn = vim.fn
@@ -103,6 +103,7 @@ autocmd("BufWritePre", {
 		end
 	end,
 })
+
 -- reopen file at the same position
 autocmd("BufReadPost", {
 	callback = function()
@@ -115,7 +116,7 @@ autocmd("BufReadPost", {
 			vim.api.nvim_win_set_cursor(0, { row, 0 })
 		end
 	end,
-	group = myAutoGroup,
+	group = simpleAutoGroup,
 })
 
 -- 定义一个函数来显示并选择缓冲区
@@ -153,21 +154,46 @@ vim.api.nvim_create_user_command("SwitchBuffer", SelectAndSwitchBuffer, {})
 vim.keymap.set("n", "<leader>e", "<cmd>SwitchBuffer<cr>", {})
 
 -- 使用 autocmd 监听插入模式下的键入事件
-vim.api.nvim_create_autocmd({ "InsertCharPre" }, {
+vim.keymap.set("i", "<CR>", function()
+	if vim.fn.pumvisible() == 1 then
+		-- 选中补全菜单中的项
+		vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<C-y>", true, false, true), "n", true)
+	else
+		-- 正常换行
+		vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<CR>", true, false, true), "n", true)
+	end
+end, { noremap = true, silent = true })
+
+-- 自动 buffer 补全（无插件）
+vim.api.nvim_create_autocmd("TextChangedI", {
+	group = simpleAutoGroup,
 	pattern = "*",
 	callback = function()
-		local triggers = { " ", "\t", "," }
-		-- 获取当前模式
-		local mode = vim.api.nvim_get_mode().mode
-		-- 只在插入模式下触发
-		if mode == "i" then
-			local char = vim.v.char
-			if not vim.list_contains(triggers, char) then
-				local key = vim.keycode("<C-x><C-n>")
-				vim.api.nvim_feedkeys(key, "m", false)
+		local col = vim.fn.col(".") - 1
+		if col <= 0 then
+			return
+		end
+
+		local line = vim.fn.getline(".")
+		local prefix = line:sub(1, col):match("[a-zA-Z0-9_]+$") or ""
+		if #prefix < 2 then
+			return
+		end -- 最少2个字母再补全，防止打扰
+
+		local words = {}
+		local seen = {}
+
+		for lnum = 1, vim.fn.line("$") do
+			for word in vim.fn.getline(lnum):gmatch("[a-zA-Z0-9_]+") do
+				if word:find("^" .. prefix) and not seen[word] and word ~= prefix then
+					table.insert(words, word)
+					seen[word] = true
+				end
 			end
-		else
-			print("not in insert mode")
+		end
+
+		if #words > 0 then
+			vim.fn.complete(col - #prefix + 1, words)
 		end
 	end,
 })
