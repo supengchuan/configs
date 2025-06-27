@@ -45,7 +45,7 @@ vim.opt.completeopt = "menu,menuone,preview,noinsert,popup"
 -- 样式 使neovim支持 termguicolors
 vim.o.termguicolors = true
 vim.opt.termguicolors = true
-vim.opt.list = true
+--vim.opt.list = true
 vim.opt.listchars = "eol:\\u21b5,space:.,tab:>-,trail:-"
 
 vim.cmd.colorscheme("sorbet")
@@ -74,6 +74,13 @@ local simpleAutoGroup = vim.api.nvim_create_augroup("myAutoGroup", {
 
 local autocmd = vim.api.nvim_create_autocmd
 
+autocmd("FileType", {
+	group = simpleAutoGroup,
+	pattern = "netrw",
+	callback = function()
+		vim.keymap.set("n", "<C-l>", "<C-w>l", { buffer = true })
+	end,
+})
 -- 进入Terminal 自动进入插入模式
 autocmd("TermOpen", {
 	group = simpleAutoGroup,
