@@ -115,7 +115,7 @@ function SetFont()
 		underline_thickness = 3,
 		underline_position = -4,
 		font = wezterm.font_with_fallback({
-			{ family = "Monaspace Xenon" },
+			{ family = "Monaspace Xenon", weight = "Medium" },
 			{ family = "FiraCode Nerd Font", weight = 450, italic = false },
 			{ family = "MesloLGL Nerd Font Mono", weight = "Regular", italic = false },
 			{ family = "UbuntuMono Nerd Font Mono", weight = "Regular", italic = false },
@@ -127,6 +127,7 @@ function SetFont()
 			{ family = "Monofur Nerd Font Mono", weight = "Regular", italic = false },
 			{ family = "SauceCodePro Nerd Font Mono", weight = "Regular", italic = false },
 			{ family = "LXGW WenKai", weight = "Regular", italic = false },
+			{ family = "Symbols Nerd Font" },
 		}),
 
 		--font_rules = {
