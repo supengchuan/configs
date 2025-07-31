@@ -39,3 +39,10 @@ $env.config.table.mode = "compact"
 
 #source ~/.zoxide.nu
 source ./zoxide.nu
+
+def open [
+    path?: string  # optional path
+] {
+    let target = if $path == null { '.' } else { $path }
+    ^explorer $target
+}
