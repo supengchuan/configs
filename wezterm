@@ -115,7 +115,7 @@ function SetFont()
 		underline_thickness = 3,
 		underline_position = -4,
 		font = wezterm.font_with_fallback({
-			{ family = "Monaspace Xenon", weight = "Medium" },
+			{ family = "Monaspace Xenon" },
 			{ family = "FiraCode Nerd Font", weight = 450, italic = false },
 			{ family = "MesloLGL Nerd Font Mono", weight = "Regular", italic = false },
 			{ family = "UbuntuMono Nerd Font Mono", weight = "Regular", italic = false },
