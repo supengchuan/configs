@@ -40,6 +40,7 @@ $env.config.table.mode = "compact"
 #source ~/.zoxide.nu
 source ./zoxide.nu
 
+# open current dir using windows explorer
 def open [
     path?: string  # optional path
 ] {
