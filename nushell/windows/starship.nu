@@ -2,10 +2,12 @@
 # - overlay which can be loaded with `overlay use starship.nu`
 # - module which can be used with `use starship.nu`
 # - script which can be used with `source starship.nu`
+let starship_path = "c://Users//{{ username }}//scoop//shims//starship.exe"
+
 export-env { $env.STARSHIP_SHELL = "nu"; load-env {
     STARSHIP_SESSION_KEY: (random chars -l 16)
     PROMPT_MULTILINE_INDICATOR: (
-        ^'C:\Users\supc\scoop\shims\starship.exe' prompt --continuation
+        ^($starship_path) prompt --continuation
     )
 
     # Does not play well with default character module.
@@ -15,7 +17,7 @@ export-env { $env.STARSHIP_SHELL = "nu"; load-env {
     PROMPT_COMMAND: {||
         # jobs are not supported
         (
-            ^'C:\Users\supc\scoop\shims\starship.exe' prompt
+            ^($starship_path) prompt
                 --cmd-duration $env.CMD_DURATION_MS
                 $"--status=($env.LAST_EXIT_CODE)"
                 --terminal-width (term size).columns
@@ -28,7 +30,7 @@ export-env { $env.STARSHIP_SHELL = "nu"; load-env {
 
     PROMPT_COMMAND_RIGHT: {||
         (
-            ^'C:\Users\supc\scoop\shims\starship.exe' prompt
+            ^($starship_path) prompt
                 --right
                 --cmd-duration $env.CMD_DURATION_MS
                 $"--status=($env.LAST_EXIT_CODE)"
