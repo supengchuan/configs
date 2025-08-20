@@ -3,7 +3,7 @@
 
 format = '''
 $directory$username$time
-[└─>](bold green) '''
+[👻 ](bold green) '''
 
 # Inserts a blank line between shell prompts
 add_newline = true
@@ -28,7 +28,7 @@ disabled = true
 disabled = false
 truncate_to_repo = false
 style = "bold blue"
-format ='[](bold green) [$path]($style) [󰄛](bold green) [$read_only]($read_only_style) '
+format ='🍋 [](bold green) [$path]($style) [󰄛](bold green) [$read_only]($read_only_style) '
 truncation_symbol = '...\'
 
 [lua]
