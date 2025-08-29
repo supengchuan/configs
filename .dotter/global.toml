@@ -65,7 +65,7 @@ lazygit = { target = "~/.config/lazygit/config.yml", type = "symbolic" }
 [ubuntu.variables]
 dpi = "108"
 username = "supc"
-bspwm_top_padding=0
+bspwm_top_padding=0.03
 
 [polybar]
 [polybar.files]
