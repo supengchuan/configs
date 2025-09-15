@@ -129,7 +129,14 @@ function SetFont()
 			{ family = "LXGW WenKai", weight = "Regular", italic = false },
 			{ family = "Symbols Nerd Font" },
 		}),
-
+		font_rules = {
+			{
+				italic = true,
+				font = wezterm.font_with_fallback({
+					{ family = "Monaspace Radon NF" },
+				}),
+			},
+		},
 		--font_rules = {
 		--	{
 		--		intensity = "Normal",
