@@ -108,4 +108,8 @@ export RUSTUP_DIST_SERVER="https://rsproxy.cn"
 export RUSTUP_UPDATE_ROOT="https://rsproxy.cn/rustup"
 
 [ -f ~/.config/proxy/proxy ] && source ~/.config/proxy/proxy
-[ -f ~/.zoxide ] && source ~/.zoxide
+
+
+if command -v zoxide > /dev/null; then
+	eval "$(zoxide init zsh)"
+fi
