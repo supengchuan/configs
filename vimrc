@@ -32,3 +32,9 @@ nmap <leader>d :g/^\s*$/d<CR> " delete blank lines
 
 set list
 set lcs=eol:\\u21b5,space:.,tab:>-,trail:-
+
+" 记住上次退出时的位置
+autocmd BufReadPost *
+    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+    \   execute "normal! g'\"" |
+    \ endif
