@@ -1,0 +1,39 @@
+patch:
+  style:
+    # 选择皮肤，亮色与暗色主题
+    color_scheme: luna
+    color_scheme_dark: luna
+
+    # 以下是预设选项。如果皮肤没写，则使用这些属性；如果皮肤写了，使用皮肤的。
+
+    # 候选框与文字的排列方式
+    candidate_list_layout: stacked  # stacked | linear       皮肤横竖排显示是调整这个
+    text_orientation: horizontal    # horizontal | vertical  文字方向
+    # 拼音或词句是否显示在键入位置
+    inline_preedit: false            # true | false  键入码显示位置
+    inline_candidate: false         # true | false  选中词显示位置
+
+    memorize_size: true             # true | false  候选窗口吸附到屏幕边缘，以减少位置跳动
+    mutual_exclusive: false         # true | false  半透明颜色进行叠加计算
+    translucency: false             # true | false  磨砂背景，仅在背景颜色为透明时可见
+    show_paging: false              # true | false  上下翻页可用的小箭头提示
+    corner_radius: 7                # 外边框 圆角半径
+    hilited_corner_radius: 0        # 选中框 圆角半径
+    border_height: -2               # 外边框 高
+    border_width: 4                # 外边框 宽
+    line_spacing: 5                 # stacked竖向布局的行间距间距
+    spacing: 8                      # 非linear行内模式下，预编辑文本与候选框之间的间距
+    shadow_size: 0                  # 阴影大小
+    #surrounding_extra_expansion: 0 # 控制未高亮候选项背景相对于高亮项的大小，负值缩小，正值放大
+
+    # 候选项格式化
+    # %@ 和 %c 在鼠须管 1.0 弃用，%@ 等同于 "[candidate] [comment]"，%c 于等同 "[label]"
+    candidate_format: '[label]. [candidate] [comment]'
+
+    #base_offset: 0                 # 字基高
+    font_face: 'Avenir'
+    font_point: 16
+    #label_font_face: 'Avenir'
+    #label_font_point: 12
+    #comment_font_face: 'Avenir'
+    #comment_font_point: 16
