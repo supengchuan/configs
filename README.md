@@ -17,3 +17,5 @@ on Linux
 ```
 dotter.exe deploy -l .\.dotter\linux.toml
 ```
+
+目前在 mac 上还是手动的 copy 文件。
