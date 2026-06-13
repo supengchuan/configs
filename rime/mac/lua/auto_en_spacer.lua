@@ -1,6 +1,7 @@
 -- 英文词条前后空格处理
--- 1) 当前候选是英文时：只要前一次上屏内容非空且末尾不是空白字符，就补前置空格（中文/英文/符号前都加）
--- 2) 前一次上屏是英文时：当前候选即使不是英文，只要不是纯数字且末尾不是空白字符，也补前置空格
+-- 1) 当前候选是英文时：只要前一次上屏内容非空且末尾不是空白字符，就补前置空格
+-- 2) 前一次上屏是英文时：当前候选包含中文且末尾不是空白字符，就补前置空格
+-- 3) 标点、符号候选直接放行，避免英文后输入标点时被 shadow candidate 拦住
 local F = {}
 
 local function is_english(text)
@@ -15,8 +16,18 @@ local function ends_with_space(text)
     return text and text:find("%s$")
 end
 
-local function is_pure_digits(text)
-    return text and text:match("^%d+$")
+local function has_cjk(text)
+    return text and text:find("[\228-\233][\128-\191][\128-\191]")
+end
+
+local function is_symbol_candidate(cand)
+    return cand.type == "punct"
+        or cand.type == "punctuator"
+        or cand.type == "symbol"
+end
+
+local function needs_space_after_english(text)
+    return has_cjk(text) and not ends_with_space(text)
 end
 
 function F.func(input, env)
@@ -29,12 +40,14 @@ function F.func(input, env)
         local c = cand
         local add_space = false
 
-        if is_english(c.text) then
+        if is_symbol_candidate(cand) then
+            add_space = false
+        elseif is_english(c.text) then
             if has_prev and not prev_end_space then
                 add_space = true
             end
         elseif prev_end_en and not prev_end_space then
-            if not is_pure_digits(c.text) and not ends_with_space(c.text) then
+            if needs_space_after_english(c.text) then
                 add_space = true
             end
         end
