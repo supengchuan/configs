@@ -1,6 +1,6 @@
 patch:
   style:
-    color_scheme: purity_of_form_custom
+    color_scheme: wechat_dark
 
     # 以下是预设选项。如果皮肤没写，则使用这些属性；如果皮肤写了，使用皮肤的。
     # 候选项格式化
@@ -13,20 +13,29 @@ patch:
     inline_preedit: true # true | false  键入码显示位置
     inline_candidate: false # true | false  选中词显示位置
 
+    # 记住面板大小后,它朝向屏幕中心扩展,而不是远离屏幕中心。
+    remember_size: false
     memorize_size: true # true | false  候选窗口吸附到屏幕边缘，以减少位置跳动
     mutual_exclusive: false # true | false  半透明颜色进行叠加计算
     translucency: false # true | false  磨砂背景，仅在背景颜色为透明时可见
     show_paging: false # true | false  上下翻页可用的小箭头提示
-
-    corner_radius: 14 # 外边框 圆角半径
-    hilited_corner_radius: 0 # 选中框 圆角半径
+    # 色彩空间： srgb | display_p3
+    color_space: srgb
+    corner_radius: 15 # 外边框 圆角半径
+    hilited_corner_radius: 10 # 选中框 圆角半径
     border_height: -2 # 外边框 高
     border_width: -2 # 外边框 宽
     line_spacing: 5 # stacked竖向布局的行间距间距
-    spacing: 8 # 非linear行内模式下，预编辑文本与候选框之间的间距
+    spacing: 10 # 非linear行内模式下，预编辑文本与候选框之间的间距
 
     font_face: PingFangSC-Regular
-    font_point: 16
+    font_point: 20
+    # 序号字体及大小（建议使用「等宽字体」）
+    label_font_face: "Lucida Grande"
+    label_font_point: 16
+    # 注字体及大小
+    comment_font_face: "PingFang SC"
+    comment_font_point: 14
 
   # 皮肤列表
   preset_color_schemes:
@@ -77,18 +86,33 @@ patch:
     wechat_dark:
       name: "微信键盘_深色 / WeChat-keyboard_dark" # 配色取自微信键盘
       author: shlroland
+      translucency: true # 磨砂： false | true
+      mutual_exclusive: false # 色不叠加： false | true
+      color_space: srgb
       back_color: 0x151515
       border_color: 0x151515
-      border_height: 0
-      border_width: 8
-      candidate_format: "%c %@ "
+      candidate_text_color: 0xE8E8E8 # 文字颜色
       comment_text_color: 0xAEAEAE
-      font_face: PingFangSC
-      font_point: 20
       hilited_candidate_back_color: 0x75B100
       hilited_candidate_text_color: 0xFFFFFF
-      horizontal: true
-      inline_preedit: true
-      label_font_point: 12
+      hilited_comment_text_color: 0xF4FAF8
+      hilited_candidate_label_color: 0xEFEFEF # 选中序号颜色
       label_color: 0x777777
       text_color: 0xBBBBBB
+      hilited_text_color: 0xed9564 # 选中拼音颜色 （inline_preedit: false）
+    mint_dark_green:
+      name: "碧月青／Mint Dark Green"
+      author: Mintimate <"Mintimate's Blog">
+      translucency: true # 磨砂： false | true
+      mutual_exclusive: false # 色不叠加： false | true
+      color_space: srgb
+      back_color: 0x323232 # 底色
+      candidate_text_color: 0xE8E8E8 # 文字颜色
+      comment_text_color: 0xBEBEBE # 注颜色
+      label_color: 0xB0B0B0 # 序号颜色
+      hilited_candidate_back_color: 0x83C81C # 选中底色
+      hilited_candidate_text_color: 0xEFEFEF # 选中文字颜色
+      hilited_comment_text_color: 0xF4FAF8 # 选中注颜色
+      hilited_candidate_label_color: 0xEFEFEF # 选中序号颜色
+      text_color: 0x83C81C # 拼音颜色 （inline_preedit: false）
+      hilited_text_color: 0xed9564 # 选中拼音颜色 （inline_preedit: false）
